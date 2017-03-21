@@ -4,10 +4,12 @@ import guru.springframework.domain.Radiologist;
 import guru.springframework.repositories.RadiologistRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by karstenspakowski on 21/03/17.
  */
+@Service
 public class RadiologistServiceImpl implements RadiologistService {
 
     private Logger log = Logger.getLogger(RadiologistServiceImpl.class);
@@ -36,7 +38,7 @@ public class RadiologistServiceImpl implements RadiologistService {
     @Override
     public Radiologist saveRadiologist(Radiologist radiologist) {
         log.debug("save radiologist " + radiologist);
-        return null;
+        return radiologistRepository.save(radiologist);
     }
 
     @Override

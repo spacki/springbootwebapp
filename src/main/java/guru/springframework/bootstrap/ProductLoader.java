@@ -59,7 +59,7 @@ public class ProductLoader implements ApplicationListener<ContextRefreshedEvent>
         radiologist1.setDomain("NHU");
         radiologist1.setEmail("radio1@nhu.uk.co");
         radiologist1.setDepartment("radiology");
-        radiologist1.setLastname("Mouse");
+        radiologist1.setLastName("Mouse");
         radiologist1.setFirstName("Micky");
         radiologist1.setPhoneNumber("+44 (0) 12345");
 
@@ -73,7 +73,7 @@ public class ProductLoader implements ApplicationListener<ContextRefreshedEvent>
         radiologist2.setDomain("NHU");
         radiologist2.setEmail("radio2@nhu.uk.co");
         radiologist2.setDepartment("radiology");
-        radiologist2.setLastname("Mouse");
+        radiologist2.setLastName("Mouse");
         radiologist2.setFirstName("Minny");
         radiologist2.setPhoneNumber("+44 (0) 12345");
 

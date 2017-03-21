@@ -10,29 +10,33 @@
 
 <body>
 <div class="container">
-    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
-    <div th:if="${not #lists.isEmpty(radiologist)}">
-        <h2>Product List</h2>
-        <table class="table table-striped">
-            <tr>
-                <th>Id</th>
-                <th>UserName</th>
-                <th>Domain</th>
-                <th>Department</th>
-                <th>View</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-            <tr th:each="product : ${radiologist}">
-                <td th:text="${radiologist.id}"><a href="/radiologists/${radiologist.id}">Id</a></td>
-                <td th:text="${radiologist.userName}">Product Id</td>
-                <td th:text="${radiologist.domain}">descirption</td>
-                <td th:text="${radiologist.department}">price</td>
-                <td><a th:href="${'/radiologist/' + radiologist.id}">View</a></td>
-                <td><a th:href="${'/radiologist/edit/' + radiologist.id}">Edit</a></td>
-                <td><a th:href="${'/radiologist/delete/' + radiologist.id}">Delete</a></td>
-            </tr>
-        </table>
+<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(radiologists)}">
+    <h2>Radiologist List</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>User Id</th>
+            <th>LastName</th>
+            <th>FirstName</th>
+            <th>Domain</th>
+            <th>Department</th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr th:each="radiologist : ${radiologists}">
+            <td th:text="${radiologist.id}"><a href="/radiologist/${radiologist.id}">Id</a></td>
+            <td th:text="${radiologist.userName}">UserName</td>
+            <td th:text="${radiologist.lastName}">LastName</td>
+            <td th:text="${radiologist.firstName}">FirstName</td>
+            <td th:text="${radiologist.domain}">Doamain</td>
+            <td th:text="${radiologist.department}">Department</td>
+            <td><a th:href="${'/radiologist/' + radiologist.id}">View</a></td>
+            <td><a th:href="${'/radiologist/edit/' + radiologist.id}">Edit</a></td>
+            <td><a th:href="${'/radiologist/delete/' + radiologist.id}">Delete</a></td>
+        </tr>
+    </table>
 
     </div>
 </div>

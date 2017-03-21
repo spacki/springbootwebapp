@@ -27,45 +27,48 @@ public class RadiologistController {
         this.radiologistService = radiologistService;
     }
 
-    @RequestMapping(value = "/radiolgist", method = RequestMethod.GET)
+    @RequestMapping(value = "/radiologists", method = RequestMethod.GET)
     public String list(Model model){
-        log.debug("get radiologist called ....");
-        model.addAttribute("radiolgist", radiologistService.listAllRadiologist());
-        return "radiolgists";
+        log.debug("get radiologists called ....");
+        model.addAttribute("radiologists", radiologistService.listAllRadiologist());
+        return "radiologists";
     }
 
-    @RequestMapping("radiolgist/{id}")
+
+    @RequestMapping("radiologist/{id}")
     public String showRadiologist(@PathVariable Integer id, Model model) {
         log.debug("get radiolgist called .. " + id);
-        model.addAttribute("radiolgist", radiologistService.getRadiologistById(id));
-        return "radiolgistshow";
+        model.addAttribute("radiologist", radiologistService.getRadiologistById(id));
+        return "radiologistshow";
     }
 
-    @RequestMapping("radiolgist/edit/{id}")
+
+    @RequestMapping("radiologist/edit/{id}")
     public String edit(@PathVariable Integer id, Model model) {
-        log.debug("edit radilogist called ... " + id);
-        model.addAttribute("product", radiologistService.getRadiologistById(id));
+        log.debug("edit radiologist called ... " + id);
+        model.addAttribute("radiologist", radiologistService.getRadiologistById(id));
         return "radiologistform";
     }
 
-    @RequestMapping("radiolgist/new")
-    public String newRadiologist(Model model){
-        model.addAttribute("radiolgist", new Radiologist());
-        return "radiolgistform";
+    @RequestMapping("radiologist/new")
+    public String newRadiologist(Model model) {
+        log.debug("create radiologist called ... ");
+        model.addAttribute("radiologist", new Radiologist());
+        return "radiologistform";
     }
 
     @RequestMapping(value = "radiologist", method = RequestMethod.POST)
     public String saveProduct(Radiologist radiologist) {
         log.debug("post radiologist called ... " + radiologist);
         radiologistService.saveRadiologist(radiologist);
-        return "redirect:/radiolgists/" + radiologist.getId();
+        return "redirect:/radiologist/" + radiologist.getId();
     }
 
-    @RequestMapping("product/delete/{id}")
+    @RequestMapping("radiologist/delete/{id}")
     public String delete(@PathVariable Integer id) {
         log.debug(" delete radiologist called ... " + id);
         radiologistService.deleteRadiologist(id);
-        return "redirect:/radiolgists";
+        return "redirect:/radiologists";
     }
 
 

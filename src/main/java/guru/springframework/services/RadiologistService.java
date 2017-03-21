@@ -1,6 +1,5 @@
 package guru.springframework.services;
 
-import guru.springframework.domain.Product;
 import guru.springframework.domain.Radiologist;
 
 /**

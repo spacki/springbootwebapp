@@ -20,7 +20,7 @@ public class Radiologist {
 
     private String domain;
 
-    private String lastname;
+    private String lastName;
 
     private String firstName;
 
@@ -62,13 +62,9 @@ public class Radiologist {
         this.domain = domain;
     }
 
-    public String getLastname() {
-        return lastname;
-    }
+    public String getLastName() { return lastName; }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
+    public void setLastName(String lastName) { this.lastName = lastName; }
 
     public String getFirstName() {
         return firstName;
@@ -110,7 +106,7 @@ public class Radiologist {
                 ", version=" + version +
                 ", userName='" + userName + '\'' +
                 ", domain='" + domain + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +

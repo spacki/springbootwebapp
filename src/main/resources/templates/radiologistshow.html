@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Framework Guru</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Radiologist Details</h2>
+    <div>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Radiologist Id:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${radiologist.id}">Radiologist Id</p></div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Radiologist User Name:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${radiologist.userName}">Radiologist UserName</p></div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Radiologist LastName:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${radiologist.lastName}">Radiologist LastName</p></div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Radiologist FirtsName:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${radiologist.firstName}">Radiologist FirtsName</p></div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Radiologist Domain:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${radiologist.domain}">Radiologist Domain</p></div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Radiologist Department:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${radiologist.department}">Radiologist Department</p></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
